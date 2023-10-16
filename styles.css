@@ -3,7 +3,7 @@
     --main-color1: #252527;
     --main-color2: #3B3C3F;
     --image-container-color: #45567D;
-    --button-hover-color: #D73A1B;
+    --button-hover-color: #BE3144;
     --header-hover-color: #554856;
     --image-text-color: #3E4854
 }
@@ -14,7 +14,7 @@
 body{
     padding:0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Raleway', sans-serif;  
 }
 main{
     display: flex;
@@ -23,7 +23,7 @@ main{
 }
 header{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: var(--header-color);
     display: flex;
     justify-content: flex-end;
@@ -42,11 +42,12 @@ nav ul{
     justify-content: space-between;
 }
 nav ul li{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     list-style-type: none;
     color: white;
+    font-family: 'Poppins', sans-serif;  
 }
-.intro{
+#intro{
     height: 100vh;
     width: 100%;
     background: repeating-linear-gradient(
@@ -63,17 +64,19 @@ nav ul li{
     flex-direction: column;
 }
 
-div.intro h1{
-    font-size: 4rem;
+#intro h1{
+    font-size: 3.5rem;
     width: fixed;
     white-space: nowrap;
+    font-weight: 800;
 }
-div.intro p{
+#intro p{
     color: red;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: -40px;
     white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
 }
 .image-with-projects{
     background-color: var(--image-container-color);
@@ -102,8 +105,8 @@ div.intro p{
 
 }
 section{
-    width: 450px;
-    height: 500px;
+    width: 410px;
+    height: 450px;
 
 }
 img{
@@ -112,13 +115,15 @@ img{
     object-fit: cover;
 }
 .image-wrap p{
+
     display: flex;
     font-size: 1.4rem;
     justify-content: center;
     background-color:var(--image-text-color);
     height: 4rem;
-    margin-top: -6px;
+    margin-top:-7px;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 .show-all{
     margin: 3rem auto 3rem;
@@ -130,6 +135,7 @@ img{
     border-radius: 5px;
     color: white;
     border: none;
+    font-family: 'Poppins', sans-serif;
 }
 .show-all:hover{
     background-color: var(--button-hover-color);
@@ -167,6 +173,7 @@ img{
     width: 800px;
     font-size: 1.6rem;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 a{
@@ -179,6 +186,7 @@ i, p{
     white-space: nowrap;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Poppins', sans-serif;
     
 }
 i{
@@ -190,10 +198,55 @@ footer{
     border-top: 6px solid var(--header-color);
     padding: 2rem 0;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     }
 .fake-portfolio{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:1500px){
+
+.image-wrap{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin-right: auto;
+    margin-left:auto;
+    justify-content: center;
+    width: 60%;
+    gap:2rem;   
+}
+@media (max-width:990px){
+
+.image-wrap{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-right: auto;
+    margin-left:auto;
+    justify-content: center;
+    width: 60%;
+    gap:2rem;   
+}
+section{
+    width: 90vw;
+    height: 770px;
+}
+img{
+    width:90vw;
+    height: 90%;
+    object-fit: cover;
+}
+.social-icons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
 }
