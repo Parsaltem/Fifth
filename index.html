@@ -25,15 +25,15 @@
 <body>
     <main>
         <header>
-          <nav>
+          <nav id="navbar">
             <ul>
-                <li><a href="#intro">About</a></li>
+                <li><a href="#welcome-section">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#work">Contact</a></li>
             </ul>
           </nav>  
         </header>
-        <div id="intro">
+        <div id="welcome-section">
             <h1 id="welcome">
                 Hey I am Mimic
             </h1>
@@ -41,11 +41,11 @@
                 a web developer
             </p>
         </div>
-        <div class="image-with-projects">
-            <h2 id="projects">
+        <div id="projects">
+            <h2>
                 These are some of my projects
             </h2>
-            <div class="image-wrap">
+            <div class="project-tile">
                 <section>
                     <a 
                     target="_blank"
@@ -128,14 +128,16 @@
         <div class="work-together">
             <h1 id="work">Let's work together...</h1>
             <p class="first">How do you take your coffee?</p>
-            <div class="social-icons">
-                <a 
+            <div id="social-icons">
+                <a
+                id="profile-link"
                 target="_blank"
                 href="https://facebook.com/freecodecamp"
                 >
                <p><i class="fa-brands fa-square-facebook"></i>Facebook</p>
                 </a>
-                <a 
+                <a
+                id="profile-link" 
                 target="_blank"
                 href="https://github.com/freecodecamp"
                 >
@@ -147,13 +149,15 @@
                 >
                 <p><i class="fa-brands fa-twitter"></i>Twitter</p>
                 </a>
-                <a 
+                <a
+                id="profile-link" 
                 target="_blank"
                 href="mailto:example@example.com"
                 >
                 <p><i class="fa-solid fa-at"></i>Send a mail</p>
                 </a>
-                <a 
+                <a
+                id="profile-link" 
                 target="_blank"
                 href="tel:555-555-5555"
                 >

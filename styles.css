@@ -1,12 +1,19 @@
 :root{
-    --header-color: #BE3144;
-    --main-color1: #252527;
-    --main-color2: #3B3C3F;
+    --header-color: #be3144;
+    --main-color1: #45567d;
+    --main-color2: #303841;
     --image-container-color: #45567D;
     --button-hover-color: #BE3144;
     --header-hover-color: #554856;
-    --image-text-color: #3E4854
+    --image-text-color: #303841;
 }
+
+@media (prefers-reduced-motion: no-preference){
+    *{
+        scroll-behavior: smooth;
+    }
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
@@ -23,7 +30,7 @@ main{
 }
 header{
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: var(--header-color);
     display: flex;
     justify-content: flex-end;
@@ -31,31 +38,43 @@ header{
     min-width: 600px;
     position: fixed;
 }
-nav{
-    padding-right: 2rem;
+#navbar{
+    margin-right: 2.5rem;
     width: 375px;
+    height: 100%;
+    margin-top:0;
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    margin-top:0;
+    width: 100%;
 }
 nav ul li{
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
     list-style-type: none;
     color: white;
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif; 
+    height: 100%;
+    width: 110%;
+    align-items: center;
 }
-#intro{
+nav ul li:hover{
+    background-color: var(--image-container-color);
+}
+#welcome-section{
     height: 100vh;
     width: 100%;
-    background: repeating-linear-gradient(
+    background-image: linear-gradient(
         65deg,
-        var(--main-color1),
-        var(--main-color1) 1px,
-        var(--main-color2) 2px,
-        var(--main-color2) 15px
+        var(--main-color2) 0%,
+        black 100%
     );
     color: white;
     align-items: center;
@@ -64,28 +83,28 @@ nav ul li{
     flex-direction: column;
 }
 
-#intro h1{
+#welcome-section h1{
     font-size: 3.5rem;
     width: fixed;
     white-space: nowrap;
     font-weight: 800;
 }
-#intro p{
-    color: red;
+#welcome-section p{
+    color: #b53041;
     font-style: italic;
     font-size: 1.8rem;
     margin-top: -40px;
     white-space: nowrap;
     font-family: 'Poppins', sans-serif;
 }
-.image-with-projects{
+#projects{
     background-color: var(--image-container-color);
     color:white;
     height: 100%;
     width: 100%;
 
 }
-.image-with-projects h2{
+#projects h2{
     width: 630px;
     margin: 6rem auto 3rem;
     border-bottom: 3px solid white;
@@ -93,7 +112,7 @@ nav ul li{
     text-align: center;
     white-space: nowrap;
 }
-.image-wrap{
+.project-tile{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -114,7 +133,7 @@ img{
     height: 90%;
     object-fit: cover;
 }
-.image-wrap p{
+.project-tile p{
 
     display: flex;
     font-size: 1.4rem;
@@ -165,15 +184,14 @@ img{
     margin-right: auto;
     margin-left: auto;
 }
-.social-icons{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 10px;
-    justify-content: center;
-    width: 800px;
+#social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
     font-size: 1.6rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    padding-inline: 3rem;
 }
 
 a{
@@ -203,7 +221,6 @@ footer{
 .fake-portfolio{
     display: flex;
     justify-content: space-between;
-    width: 80%;
     font-family: 'Poppins', sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -211,7 +228,7 @@ footer{
 
 @media (max-width:1500px){
 
-.image-wrap{
+.project-tile{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -222,8 +239,7 @@ footer{
     gap:2rem;   
 }
 @media (max-width:990px){
-
-.image-wrap{
+.project-tile{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     margin-right: auto;
@@ -241,12 +257,11 @@ img{
     height: 90%;
     object-fit: cover;
 }
-.social-icons{
+#social-icons{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 50%;
     justify-content: center;
     align-items: center;
 }
-
 }
