@@ -16,7 +16,6 @@
 
 *, *::before, *::after{
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 body{
@@ -105,7 +104,7 @@ nav ul li:hover{
 
 }
 #projects h2{
-    width: 100%;
+    width: 40%;
     margin: 6rem auto 3rem;
     border-bottom: 3px solid white;
     font-size: 2.5rem;
@@ -135,6 +134,7 @@ img{
 .project-tile p{
 
     display: flex;
+    font-weight: 200;
     font-size: 1.4rem;
     justify-content: center;
     background-color:var(--image-text-color);
@@ -175,6 +175,11 @@ img{
     width: 100%;
     text-align: center;
 }
+.work-together p{
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
 .work-together .first{
     color: white;
     font-style: italic;
@@ -187,17 +192,15 @@ img{
 #social-icons{
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
     font-size: 1.6rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    padding-inline: 3rem;
+    column-gap: 2rem;
 }
 
 a{
     text-decoration:none;
-    color: inherit;
-    
+    color: inherit;  
 }
 
 i{
@@ -230,6 +233,7 @@ footer{
     justify-content: center;
     width: 60%;
     gap:2rem;   
+}
 }
 @media (max-width:990px){
 .project-tile{
