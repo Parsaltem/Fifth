@@ -196,6 +196,11 @@ img{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     column-gap: 2rem;
+    transition: transform 0.3s ease-out;
+}
+
+#social-icons a:hover{
+    transform: translateY(6px)
 }
 
 a{
